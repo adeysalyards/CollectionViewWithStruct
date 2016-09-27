@@ -14,6 +14,7 @@
 		A0B204601D99D2B800D7F88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B2045E1D99D2B800D7F88D /* LaunchScreen.storyboard */; };
 		A0B2046B1D99D2B800D7F88D /* Instagram_Clone_PrepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2046A1D99D2B800D7F88D /* Instagram_Clone_PrepTests.swift */; };
 		A0B204761D99D2B800D7F88D /* Instagram_Clone_PrepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B204751D99D2B800D7F88D /* Instagram_Clone_PrepUITests.swift */; };
+		A0B204841D9A05F400D7F88D /* myCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B204831D9A05F400D7F88D /* myCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A0B204711D99D2B800D7F88D /* Instagram-Clone-PrepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instagram-Clone-PrepUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B204751D99D2B800D7F88D /* Instagram_Clone_PrepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instagram_Clone_PrepUITests.swift; sourceTree = "<group>"; };
 		A0B204771D99D2B800D7F88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0B204831D9A05F400D7F88D /* myCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				A0B204551D99D2B800D7F88D /* AppDelegate.swift */,
 				A0B204571D99D2B800D7F88D /* ViewController.swift */,
 				A0B204591D99D2B800D7F88D /* Main.storyboard */,
+				A0B204831D9A05F400D7F88D /* myCollectionViewCell.swift */,
 				A0B2045C1D99D2B800D7F88D /* Assets.xcassets */,
 				A0B2045E1D99D2B800D7F88D /* LaunchScreen.storyboard */,
 				A0B204611D99D2B800D7F88D /* Info.plist */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					A0B204511D99D2B800D7F88D = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = V9782N28G2;
 						ProvisioningStyle = Automatic;
 					};
 					A0B204651D99D2B800D7F88D = {
@@ -259,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B204841D9A05F400D7F88D /* myCollectionViewCell.swift in Sources */,
 				A0B204581D99D2B800D7F88D /* ViewController.swift in Sources */,
 				A0B204561D99D2B800D7F88D /* AppDelegate.swift in Sources */,
 			);
@@ -410,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V9782N28G2;
 				INFOPLIST_FILE = "Instagram-Clone-Prep/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Capital-One.Instagram-Clone-Prep";
@@ -422,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V9782N28G2;
 				INFOPLIST_FILE = "Instagram-Clone-Prep/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Capital-One.Instagram-Clone-Prep";
