@@ -36,7 +36,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="461"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here is a cute photo of my cat. 🐱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rN-4S-SdY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here is a cute photo of my cat. 🐱" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rN-4S-SdY">
                                                     <frame key="frameInset" minX="8" minY="380" width="325" height="73"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -73,7 +73,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vOu-zX-MLb"/>
+                    <navigationItem key="navigationItem" id="vOu-zX-MLb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="97y-HD-mgf">
+                            <connections>
+                                <segue destination="DzI-F9-o4j" kind="presentation" id="ptU-9m-a10"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="instagramCollectionView" destination="bnU-Yt-Uh1" id="EcF-dK-7i3"/>
                     </connections>
@@ -81,6 +87,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="776.76161919040487"/>
+        </scene>
+        <!--Take Picture View Controller-->
+        <scene sceneID="baf-YF-Z32">
+            <objects>
+                <viewController id="BeF-oM-fSg" customClass="TakePictureViewController" customModule="Instagram_Clone_Prep" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qhy-AN-8Oc"/>
+                        <viewControllerLayoutGuide type="bottom" id="o7w-Dg-iVR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hmy-Wf-gb3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="PzQ-wc-px8">
+                                <frame key="frameInset" minY="64" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMN-Gn-0x6">
+                                <frame key="frameInset" minX="16" minY="454" width="343" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.53260445590000005" blue="0.9044332504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhotoButton:" destination="BeF-oM-fSg" eventType="touchUpInside" id="zUS-Ir-cnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngB-rA-07W">
+                                <frame key="frameInset" minX="320" minY="533" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="GnH-2q-r0G" kind="show" id="rnI-WI-56a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rv1-VD-dry"/>
+                    <connections>
+                        <outlet property="myImageView" destination="PzQ-wc-px8" id="nPj-4v-I2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhn-9B-m8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2743.1999999999998" y="776.76161919040487"/>
+        </scene>
+        <!--Add a Caption-->
+        <scene sceneID="qeJ-8y-413">
+            <objects>
+                <viewController id="GnH-2q-r0G" customClass="CaptionViewController" customModule="Instagram_Clone_Prep" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LOb-hl-25v"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nsj-2i-JHD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AIp-EX-PsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aeh-yy-5Z1">
+                                <frame key="frameInset" minX="16" minY="79" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VjC-Xw-iyc">
+                                <frame key="frameInset" minX="16" minY="129" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcI-Qb-67U">
+                                <frame key="frameInset" minX="16" minY="173" width="331" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Caption" id="bBH-Dp-EeU">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="vN2-5s-OAm">
+                            <connections>
+                                <action selector="postImageAction:" destination="GnH-2q-r0G" id="eIR-e3-vyo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionField" destination="Aeh-yy-5Z1" id="gpD-SF-qhF"/>
+                        <outlet property="myImageView" destination="qcI-Qb-67U" id="WAl-oL-8bc"/>
+                        <outlet property="usernameField" destination="VjC-Xw-iyc" id="qs3-ng-wXm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHK-g2-jfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3472.8000000000002" y="776.76161919040487"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DEu-5H-Vy0">
@@ -100,5 +203,26 @@
             </objects>
             <point key="canvasLocation" x="293.60000000000002" y="776.76161919040487"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6ZZ-n5-ZOI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DzI-F9-o4j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="auM-t4-etE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BeF-oM-fSg" kind="relationship" relationship="rootViewController" id="hzz-5m-hZu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBo-od-57h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="776.76161919040487"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="image1" width="750" height="750"/>
+    </resources>
 </document>

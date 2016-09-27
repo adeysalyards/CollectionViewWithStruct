@@ -8,6 +8,18 @@
 
 import UIKit
 
+struct instagramImage {
+    let image: UIImage
+    let username: String
+    let caption: String
+}
+
+var myObjects = [
+    instagramImage(image: #imageLiteral(resourceName: "image1"), username: "adeylady123", caption: "kickstarter pitchfork"),
+    instagramImage(image: #imageLiteral(resourceName: "image2"), username: "Rachel Posner", caption: "more information")
+    
+]
+
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var instagramCollectionView: UICollectionView!
@@ -15,18 +27,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var instagramImages: [UIImage]! = []
     var usernames: [String]! = []
     var captions: [String]! = []
-    
-    struct instagramImage {
-        let image: UIImage
-        let username: String
-        let caption: String
-    }
-    
-    let myObjects = [
-        instagramImage(image: #imageLiteral(resourceName: "image1"), username: "adeylady123", caption: "kickstarter pitchfork"),
-        instagramImage(image: #imageLiteral(resourceName: "image2"), username: "Rachel Posner", caption: "more informaiton")
-        
-    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             "Brunch tumeric master cleanse taxidermy tattooed blue bottle.",
             "Selfies hammock dreamcatcher, succulents slow-carb banh mi franzen thundercats hot chicken banjo whatever mixtape.",
             "Chartreuse woke flexitarian lumbersexual kickstarter, whatever yr microdosing XOXO."]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        instagramCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
